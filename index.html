@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Tool Aggregator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f8f9fa;
+    }
+    header {
+      background: #111827;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .filter {
+      text-align: center;
+      margin: 20px;
+    }
+    .filter button {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      background: #6c63ff;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .tools-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    .tool-card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      width: 280px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+    .tool-card:hover {
+      transform: translateY(-5px);
+    }
+    .tool-logo {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+    .tool-title {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+    .tool-rating {
+      color: #ffc107;
+    }
+    .tool-desc {
+      font-size: 0.9em;
+      margin: 10px 0;
+    }
+    .tool-link {
+      text-decoration: none;
+      background: #6c63ff;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+     a {
+      display: inline-block;
+      margin: 20px;
+      padding: 15px 30px;
+      background: #6c63ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1.2em;
+    }
+    * {
+  box-sizing: border-box;
+}
+
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🔥 AI Tool Aggregator</h1>
+    <p>Discover the best AI tools for creators, coders, marketers, and more</p>
+  </header>
+
+  <div class="filter">
+    <!-- <button onclick="filterTools('all')">All</button> -->
+    <a href="index.html" class="tool-link">All</a>
+    <!-- <button onclick="filterTools('writing')">Writing</button>
+    <button onclick="filterTools('video')">Video</button>
+    <button onclick="filterTools('coding')">Coding</button> -->
+    <a href="writing.html" class="tool-link">Writing</a>
+    <a href="videos.html" class="tool-link">Videos</a>
+    <a href="coding.html" class="tool-link">Coding</a>
+  </div>
+  <div class="tools-grid">
+  <!-- Jasper-->
+  <div class="tool-card" data-category="writing">
+  <img src="jasper.png" alt="Jasper AI" class="tool-logo" />
+  <div class="tool-title">Jasper AI</div>
+  <div class="tool-rating">⭐⭐⭐⭐⭐</div>
+  <div class="tool-desc">AI writing assistant for marketers and content creators.</div>
+  <a href="jasper.html" class="tool-link">Try Jasper →</a>
+</div>
+
+
+    <!-- Pictory -->
+    <div class="tool-card" data-category="video">
+      <img src="Pictory.png" alt="Pictory" class="tool-logo" />
+      <div class="tool-title">Pictory</div>
+      <div class="tool-rating">⭐⭐⭐⭐</div>
+      <div class="tool-desc">Turn blog posts into engaging videos using AI.</div>
+      <a href="pictory.html" class="tool-link">Try Pictory →</a>
+    </div>
+
+    <!-- Ghostwriter -->
+    <div class="tool-card" data-category="coding">
+      <img src="Ghostwriter.png" alt="Ghostwriter" class="tool-logo" />
+      <div class="tool-title">Replit Ghostwriter</div>
+      <div class="tool-rating">⭐⭐⭐⭐⭐</div>
+      <div class="tool-desc">AI-powered code assistant inside your IDE.</div>
+      <a href="ghostwriter.html" class="tool-link">Try Ghostwriter →</a>
+    </div>
+  </div>
+
+  <script>
+    function filterTools(category) {
+      const cards = document.querySelectorAll('.tool-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
+
