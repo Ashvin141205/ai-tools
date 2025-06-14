@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Writing Tools – Jasper, Pictory & Ghostwriter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f8f8;
+      padding: 30px;
+      position: relative;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    h1 {
+      color: #333;
+    }
+    button.tool-btn {
+      display: block;
+      width: 100%;
+      text-align: left;
+      background: #6c63ff;
+      color: white;
+      padding: 15px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 15px;
+      cursor: pointer;
+      font-size: 1.1em;
+    }
+    .content-box {
+      display: none;
+      margin-top: 10px;
+      background: #f0f0f0;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    blockquote {
+      background: white;
+      border-left: 5px solid #6c63ff;
+      padding: 10px;
+      margin: 10px 0;
+      font-style: italic;
+    }
+    .back-arrow {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: transparent;
+      border: none;
+      font-size: 1.8em;
+      cursor: pointer;
+      color: #6c63ff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Back Arrow Button -->
+  <button onclick="history.back()" class="back-arrow" title="Go back">←</button>
+
+  <div class="container">
+    <h1>✍️ AI Writing Tools: Explore Jasper, Pictory & Ghostwriter</h1>
+    <p>Click on each tool below to learn how it helps with writing tasks like blogs, scripts, documentation, and more.</p>
+
+    <!-- Jasper -->
+    <button class="tool-btn" onclick="toggleContent('jasper')">🟣 Jasper AI – Creative & Marketing Writing</button>
+    <div id="jasper" class="content-box">
+      <p><strong>Jasper</strong> is perfect for blogs, product descriptions, ad copy, and social posts. It uses templates, tones, and prompts to create content fast.</p>
+      <ul>
+        <li>Blog post intros & full articles</li>
+        <li>Facebook, Instagram, LinkedIn captions</li>
+        <li>Email marketing copy</li>
+      </ul>
+      <blockquote>
+        <strong>Prompt:</strong> Write an intro for “How to Stay Productive at Home”<br>
+        <strong>Output:</strong> Working from home can be both freeing and frustrating. To stay on top of your goals, you’ll need the right mindset, environment, and schedule. Let’s break it down.
+      </blockquote>
+    </div>
+
+    <!-- Pictory -->
+    <button class="tool-btn" onclick="toggleContent('pictory')">🟠 Pictory – Script Writing from Blog Content</button>
+    <div id="pictory" class="content-box">
+      <p><strong>Pictory</strong> takes blog posts or outlines and turns them into compelling video scripts. Ideal for video marketers, YouTubers, and content repurposing.</p>
+      <ul>
+        <li>Extracts key points from long-form content</li>
+        <li>Creates short, engaging summaries for narration</li>
+        <li>Optimizes text for visuals and voiceover</li>
+      </ul>
+      <blockquote>
+        <strong>Prompt:</strong> Summarize an article about “Healthy Sleep Habits” into a 1-minute video script.<br>
+        <strong>Output:</strong> Want better sleep? Try these 3 habits: 1) Keep a consistent bedtime, 2) Avoid screens late at night, 3) Make your bedroom cool and dark. Sleep well, live well!
+      </blockquote>
+    </div>
+
+    <!-- Ghostwriter -->
+    <button class="tool-btn" onclick="toggleContent('ghostwriter')">🔵 Ghostwriter – Technical Writing & Docs</button>
+    <div id="ghostwriter" class="content-box">
+      <p><strong>Ghostwriter</strong> (from Replit) is ideal for developers and technical writers. It explains code, generates documentation, and helps with tutorials or README files.</p>
+      <ul>
+        <li>Creates docstrings and in-code comments</li>
+        <li>Explains code in plain English</li>
+        <li>Helps write clean, readable developer content</li>
+      </ul>
+      <blockquote>
+        <strong>Prompt:</strong> Document this function: <code>def is_even(n): return n % 2 == 0</code><br>
+        <strong>Output:</strong><br>
+        <code>"""Check if a number is even. Returns True if n is divisible by 2."""</code>
+      </blockquote>
+    </div>
+  </div>
+
+  <script>
+    function toggleContent(id) {
+      const allBoxes = document.querySelectorAll('.content-box');
+      allBoxes.forEach(box => {
+        if (box.id === id) {
+          box.style.display = box.style.display === "block" ? "none" : "block";
+        } else {
+          box.style.display = "none";
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

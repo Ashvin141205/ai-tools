@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Coding Tools – Jasper, Pictory & Ghostwriter</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f8f8f8; padding: 30px; }
+    .container { max-width: 900px; margin: auto; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
+    h1 { color: #333; }
+    button {
+      display: block;
+      width: 100%;
+      text-align: left;
+      background: #007acc;
+      color: white;
+      padding: 15px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 15px;
+      cursor: pointer;
+      font-size: 1.1em;
+    }
+    .content-box {
+      display: none;
+      margin-top: 10px;
+      background: #f0f0f0;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    blockquote {
+      background: white;
+      border-left: 5px solid #007acc;
+      padding: 10px;
+      margin: 10px 0;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>👨‍💻 AI Coding Tools: Jasper, Pictory & Ghostwriter</h1>
+    <p>Explore how these tools help with programming documentation, explainer videos, and tutorial creation.</p>
+
+    <button onclick="toggleContent('ghostwriter')">🔵 Ghostwriter – Live Code & Docs</button>
+    <div id="ghostwriter" class="content-box">
+      <p>Ghostwriter helps write clean code, explain logic, and generate in-line comments or technical articles.</p>
+      <ul>
+        <li>Explain complex functions</li>
+        <li>Create API and library docs</li>
+        <li>Convert logic into plain English</li>
+      </ul>
+      <blockquote><strong>Prompt:</strong> Explain a binary search function<br><strong>Output:</strong> "This function takes a sorted list and searches by dividing it in half until the value is found."</blockquote>
+    </div>
+
+    <button onclick="toggleContent('jasper')">🟣 Jasper – Developer Copywriting</button>
+    <div id="jasper" class="content-box">
+      <p>Jasper creates developer blog posts, technical how-tos, and even landing page content for dev tools.</p>
+      <ul>
+        <li>Write product docs & API usage guides</li>
+        <li>Explain architecture and tools</li>
+        <li>Generate dev-focused web content</li>
+      </ul>
+      <blockquote><strong>Prompt:</strong> Write blog intro about GraphQL<br><strong>Output:</strong> "GraphQL isn’t just a buzzword — it’s transforming how we query APIs. Here’s why devs are switching."</blockquote>
+    </div>
+
+    <button onclick="toggleContent('pictory')">🟠 Pictory – Code Tutorial Videos</button>
+    <div id="pictory" class="content-box">
+      <p>Pictory turns your blog or written tutorial into a narrated, visual code walkthrough.</p>
+      <ul>
+        <li>Video versions of blog tutorials</li>
+        <li>Explain setup steps visually</li>
+        <li>Highlight code snippets with narration</li>
+      </ul>
+      <blockquote><strong>Prompt:</strong> Turn article about Python decorators into video<br><strong>Output:</strong> A short narrated video breaking down each code block with overlays and highlights.</blockquote>
+    </div>
+  </div>
+
+  <script>
+    function toggleContent(id) {
+      const box = document.getElementById(id);
+      box.style.display = box.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</body>
+</html>
